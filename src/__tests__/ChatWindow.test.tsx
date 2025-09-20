@@ -16,7 +16,7 @@ describe('ChatWindow', () => {
     const user = userEvent.setup()
     render(<ChatWindow />)
 
-    const input = screen.getByLabelText(/message/i)
+    const input = screen.getByRole('textbox', { name: /message/i })
     await user.type(input, 'What is the truth?')
     await user.click(screen.getByRole('button', { name: /send/i }))
 
@@ -31,4 +31,3 @@ describe('ChatWindow', () => {
     })
   })
 })
-

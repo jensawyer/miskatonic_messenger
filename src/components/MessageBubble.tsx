@@ -15,7 +15,9 @@ export default function MessageBubble({ msg }: { msg: Message }) {
             await navigator.clipboard.writeText(msg.content)
             setCopied(true)
             setTimeout(() => setCopied(false), 1200)
-        } catch {}
+        } catch {
+            /* noop */
+        }
     }
 
     return (

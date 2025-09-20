@@ -9,11 +9,10 @@ describe('ChatInput', () => {
     const onSend = vi.fn()
     render(<ChatInput onSend={onSend} />)
 
-    const input = screen.getByLabelText(/message/i)
+    const input = screen.getByRole('textbox', { name: /message/i })
     await user.type(input, 'Hello there{enter}')
 
     expect(onSend).toHaveBeenCalledWith('Hello there')
     expect((input as HTMLInputElement).value).toBe('')
   })
 })
-

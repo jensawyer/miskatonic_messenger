@@ -38,19 +38,25 @@ export default function ChatWindow() {
                     setMessages(restored)
                 }
             }
-        } catch {}
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+        } catch {
+            /* noop */
+        }
+        }, [])
 
     // persist UI history (we never send it to backend)
     useEffect(() => {
         try {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
-        } catch {}
+        } catch {
+            /* noop */
+        }
     }, [messages])
 
     useEffect(() => {
-        bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
+        const el = bottomRef.current as unknown as { scrollIntoView?: (opts?: any) => void } | null
+        if (el && typeof el.scrollIntoView === 'function') {
+            el.scrollIntoView({ behavior: 'smooth' })
+        }
     }, [messages, loading])
 
     async function handleSend(text: string) {
@@ -93,7 +99,9 @@ export default function ChatWindow() {
         setMessages([])
         try {
             localStorage.removeItem(STORAGE_KEY)
-        } catch {}
+        } catch {
+            /* noop */
+        }
     }
 
     return (

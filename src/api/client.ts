@@ -10,7 +10,6 @@ export async function sendChat(
     if (import.meta.env.DEV) {
         // Redact message content in logs
         const msgCount = Array.isArray(payload?.messages) ? payload.messages.length : 0
-        // eslint-disable-next-line no-console
         console.log('→ FE calling', url, `(messages: ${msgCount})`)
     }
 

@@ -1,4 +1,4 @@
-.PHONY: dev build preview install clean lint typecheck test test-run
+.PHONY: dev build preview install clean lint typecheck test test-run reinstall
 
 SHELL := /bin/bash
 
@@ -21,6 +21,12 @@ preview:
 clean:
 	@echo "Removing build artifacts..."
 	rm -rf node_modules dist
+
+reinstall:
+	@echo "Fresh reinstall: removing node_modules, dist, and lockfile..."
+	rm -rf node_modules dist package-lock.json
+	@echo "Reinstalling dependencies (npm install to regenerate lockfile)..."
+	npm install
 
 lint:
 	@echo "Linting..."
