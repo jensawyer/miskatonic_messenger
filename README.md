@@ -1,24 +1,27 @@
-# The Miskatonic Messenger
+# 🏫 The Miskatonic Messenger
 
-React + Vite frontend for consulting the Eldritch Oracle. Strict TypeScript, TailwindCSS, and pinned dependencies.
+A React + Vite conduit for consulting the **Eldritch Oracle** — a whispering interface wrought in Strict TypeScript, woven 
+with TailwindCSS, and bound by the iron chains of pinned dependencies.
 
-## Prerequisites
-- You successfully completed the [Eldritch Oracle setup](https://github.com/jensawyer/eldritch-oracle).
-- Node.js 18.18+ (recommended LTS).
-- npm 9+.
-- No fear of the insanity which you may encounter.
+> “Ph’nglui mglw’nafh code R’lyeh wgah’nagl Vite fhtagn.”
 
-## Quickstart
-- Copy `.env.example` to `.env.development` if needed and adjust values.
-- Install deps: `make install` 
-- Run dev: `make dev` 
+---
 
-The dev server proxies `/api` to `VITE_DEV_PROXY_TARGET` from `.env.development` (defaults to `http://localhost:8000`).
-This should be where you are running the Eldritch Oracle.
+## 🔮 Prerequisites
+Before invoking the Messenger, be certain:
+- You have successfully completed the [Eldritch Oracle setup](https://github.com/jensawyer/eldritch-oracle) and the agent is currently running.
+- You possess Node.js 18.18+ (the LTS path is less perilous).
+- You wield npm 9+.
+- Most importantly: you hold **no fear of the madness** which may seep through the interface.
 
-## Scripts
-- `make dev` — Start Vite dev server on port 5173 then open [http://localhost:5173](http://localhost:5173)
-- `make build` — Production build.
-- `make preview` — Preview production build locally.
-- `make clean` — Remove `node_modules` and `dist`.
+---
 
+## ☣️ Quickstart Ritual
+1. Copy `.env.example` to `.env.development` and inscribe the proper values. The default location for the Eldritch Oracle is `http://localhost:8000`.
+2. Summon dependencies:
+   ```sh
+   make install
+3. Start the dev server:
+   ```sh
+   make dev
+4. Visit [localhost:5173](http://localhost:5173/) in your browser.
