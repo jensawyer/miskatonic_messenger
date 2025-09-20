@@ -1,0 +1,46 @@
+{
+  "name": "eldritch-oracle-web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Eldritch Oracle web frontend (React + Vite)",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "vite --host --strictPort --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --strictPort --port 5173",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "0.5.15",
+    "@types/node": "22.17.2",
+    "@types/react": "19.1.11",
+    "@types/react-dom": "19.1.7",
+    "@typescript-eslint/eslint-plugin": "8.21.0",
+    "@typescript-eslint/parser": "8.21.0",
+    "@vitejs/plugin-react": "5.0.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "9.33.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-react": "7.37.2",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "postcss": "8.4.47",
+    "prettier": "3.3.3",
+    "tailwindcss": "3.4.13",
+    "@testing-library/react": "16.0.0",
+    "@testing-library/user-event": "14.5.2",
+    "jsdom": "24.1.0",
+    "vitest": "2.0.5",
+    "typescript": "5.6.3",
+    "vite": "7.1.2"
+  }
+}
