@@ -1,6 +1,6 @@
 # 🏫 The Miskatonic Messenger
 
-A React + Vite conduit for consulting the **Eldritch Oracle** — a whispering interface wrought in Strict TypeScript, woven 
+A React + Vite conduit for consulting the **Eldritch Oracle**. This is a whispering interface wrought in Strict TypeScript, woven 
 with TailwindCSS, and bound by the iron chains of pinned dependencies.
 
 > “Ph’nglui mglw’nafh code R’lyeh wgah’nagl Vite fhtagn.”
@@ -25,3 +25,9 @@ Before invoking the Messenger, be certain:
    ```sh
    make dev
 4. Visit [localhost:5173](http://localhost:5173/) in your browser.
+
+## 🧐 Note
+Since the Eldritch Oracle is typically running with Ollama using the OpenAPI compatible interface, I didn't bother to implement 
+ sending context. The default artificial context limit on Ollama is too small (even much less than most models support) and since I'm
+  using the OpenAI compatible interface, it isn't so easy to override the default. We'll just keep it small for now since this is
+ just a fun portfolio project. If it asks you a question, know that it has no idea it did when you reply.
