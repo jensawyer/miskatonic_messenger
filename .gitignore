@@ -1,3 +1,5 @@
+.DS_Store
+
 /tmp
 /out-tsc
 
@@ -9,3 +11,12 @@ yarn-error.log*
 .pnp.js
 
 .vscode/*
+.idea
+
+# Build output
+/dist
+
+# Environment files (keep only example in repo)
+.env
+.env.*
+!.env.example
